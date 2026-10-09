@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro</title>
+<style>
+body { font-family: Arial, sans-serif; background: #f0f2f5; display: flex; justify-content: center; padding: 30px; }
+form { background: #fff; padding: 24px; border-radius: 8px; width: 100%; max-width: 380px; box-shadow: 0 2px 8px rgba(0,0,0,.15); }
+h1 { font-size: 22px; margin-top: 0; }
+label { display: block; margin-top: 12px; font-size: 14px; }
+input[type="text"], input[type="email"], input[type="password"], select { width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box; border: 1px solid #aaa; border-radius: 4px; }
+.termos { display: flex; align-items: center; gap: 6px; }
+button { width: 100%; margin-top: 18px; padding: 10px; background: #1a5fb4; color: #fff; border: 0; border-radius: 4px; font-size: 16px; cursor: pointer; }
+#mensagem { margin-top: 14px; font-size: 14px; }
+.erro { color: #c01c28; }
+.ok { color: #26a269; }
+</style>
+</head>
+<body>
+<form id="formCadastro" novalidate>
+<h1>Cadastro</h1>
+<label>Nome Completo
+<input type="text" id="nome" placeholder="Digite seu nome completo" required>
+</label>
+<label>E-mail Institucional
+<input type="email" id="email" placeholder="nome@instituicao.edu.br" required>
+</label>
+<label>Senha de Acesso
+<input type="password" id="senha" minlength="6" placeholder="Mínimo de 6 caracteres" required>
+</label>
+<label>Confirmação de Senha
+<input type="password" id="confirmaSenha" placeholder="Repita a senha" required>
+</label>
+<label>Perfil Técnico
+<select id="perfil" required>
+<option value="">Selecione</option>
+<option value="redes">Redes</option>
+<option value="desenvolvimento">Desenvolvimento</option>
+<option value="suporte">Suporte</option>
+</select>
+</label>
+<label class="termos">
+<input type="checkbox" id="termos"> Aceito os termos de uso
+</label>
+<button type="submit">Cadastrar</button>
+<div id="mensagem"></div>
+</form>
+<script src="script.js"></script>
+</body>
+</html>
